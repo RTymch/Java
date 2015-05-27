@@ -16,7 +16,7 @@ public class Loop3 {
 		
 		for(int i = 1; i <= kilo; i+=2) {
 				pound = i * 2.2;
-				System.out.printf("%-10d %8.1f \n", i, pound); // з цим рядком довелося трохи поморочитись. методом тика))
+				System.out.printf("%-10d %8.1f \n", i, pound); 
 		}
 	}
 }
