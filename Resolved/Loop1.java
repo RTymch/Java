@@ -19,7 +19,7 @@ public class Loop1 {
 		int sum = 0;
 		double average = 0;
 		
-		while (true) {         // пригадав що минулого разу робив отак)) питання - чому в умові циклу true? написав, але не розумію))
+		while (true) {         // питання - чому в умові циклу true? написав методом тика, але не розумію
 			number = input.nextInt();
 			
 			if (number > 0)
