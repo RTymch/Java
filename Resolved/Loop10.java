@@ -5,7 +5,7 @@ rated by exactly one space.*/
 public class Loop10 {
 	public static void main(String[] args) {
 		
-		int from = 100;     // я розумію що такі імена змінним не дають, але воно якось зрозуміліше)
+		int from = 100;     
 		int to = 1000;
 		int count = 0;
 		
