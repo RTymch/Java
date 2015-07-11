@@ -26,7 +26,7 @@ public class Loop21 {
 			double monthlyInterestRate = annualInterestRate / 1200;
 			count ++;
 			System.out.printf("%3.3f ", annualInterestRate);
-			while (x < count){
+			while (x < count){                                      // чи можна зробити тут з for()
 				monthlyPayment = loan * monthlyInterestRate / (1
 						- 1 / Math.pow(1 + monthlyInterestRate, years * 12));
 				double totalPayment = monthlyPayment * years * 12;
