@@ -35,11 +35,11 @@ public class Class09 /*RegularPolygon*/{
 	private double y = 0;
 	
 	Class09(){}
-	Clas09(int n, double side){
-		
+	Clas09(int n, double side){    // це типу один конструктор specified number of sides and length of side,
+	                                //centered at ( 0 , 0 ). 
 	}
-	Class09(){}
-	
+	Class09(){}           // а це другий  and x-and y-coordinates. чим відрізняються і як відобразити координати
+				// не розумію
 	
 	public int getN(){
 		return n;
@@ -81,11 +81,11 @@ class Class09Test{
 	
 	public static void main(String[] args){
 		
-		Class09 polygon1 = new Class09;
-		System.out.println(getPerimeter() +" "+ getArea);
+		Class09 polygon1 = new Class09();
+		System.out.println(getPerimeter() +" "+ getArea());  // це типу створити об’єкт конструктором без аргументів
 		
-		Class09 polygon2 = new Class09;
-		Class09 polygon3 = new Class09;
+		Class09 polygon2 = new Class09();  // ну тут би мали бути конструктори з аргументами вже, але не розумію як
+		Class09 polygon3 = new Class09();
 		
 	}
 }
