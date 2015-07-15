@@ -34,17 +34,17 @@ a balance of $20,000, and an annual interest rate of 4.5%. Use the withdraw
 method to withdraw $2,500, use the deposit method to deposit $3,000, and print
 the balance, the monthly interest, and the date when this account was created.*/
 
-public class Class07 /*Account*/{
-
-	private int id = 0;
+public class Class07 /*Account*/{     // ну по перше сама умова цієї задачі не надто мені зрозуміла. і тут таких повно
+				     // якщо після прочитання умови ти також нічого не зрозумів, то можна забити і
+	private int id = 0;	    //  перейти сюди https://github.com/SergiyL/Java/blob/master/Class_and_Object/Class08.java
 	private double balance = 0;
 	private double annualInterestRate = 0;
-	private Date dateCreated;
+	private Date dateCreated;     // не певен чи правильно зрозумів умову "private Date data field"
 	
 	Class07(){}
 	
-	Class07(int id, double balance){
-		id = newId;
+	Class07(int id, double balance){    // конструктор за зразком поданим в підручнику. але екліпс показує помилку
+		id = newId;      
 		balance = newBalance;
 	}
 	
@@ -69,24 +69,24 @@ public class Class07 /*Account*/{
 		annualInterestRate = newAnnualInterestRate / 100;
 	}
 	
-	public double getDateCreated(){
+	public Date getDateCreated(){
 		return dateCreated;
 	}
 	
 	public double getMonthlyInterestRate(){
-		monthlyInterestRate = annualInterestRate / 12;
+		double monthlyInterestRate = annualInterestRate / 12;
 		return monthlyInterestRate;
 	}
 	
 	public double getMonthlyInterest(){
-		monthlyInterest = balance * monthlyInterestRate;
+		double monthlyInterest = balance * monthlyInterestRate();  
 		return monthlyInterest; 
 	}
 	public double withdraw(){
-		balance - 
+		balance - getMonthlyInterest() // якщо правильно зрозумів вимогу до функції. мінус підсвічено як недопустимий оператор
 	}
 	public double deposit(){
-		balance + 
+		balance + getMonthlyInterest() // аналогічно
 	}
 }
 
@@ -98,5 +98,8 @@ class Test07Class{
 		account.id = 1122;
 		account.balance = 20000;
 		account.annualInterestRate = 4.5;
+		
+		// Use the withdraw method to withdraw $2,500, use the deposit method to deposit $3,000. 
+		// тут взагалі нічого не ясно.
 	}
 }
