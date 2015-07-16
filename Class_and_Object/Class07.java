@@ -34,7 +34,7 @@ a balance of $20,000, and an annual interest rate of 4.5%. Use the withdraw
 method to withdraw $2,500, use the deposit method to deposit $3,000, and print
 the balance, the monthly interest, and the date when this account was created.*/
 
-public class Class07 /*Account*/{
+public class Class07 /*Account*/{     
 
 	private int id = 0;
 	private double balance = 0;
@@ -97,7 +97,15 @@ public class Class07 /*Account*/{
 		account.withdraw(2500);
 		account.deposit(3000);
 		
-		System.out.println(account.getBalance()+" "+ account.getMonthlyInterestRate()+" "+account.getDateCreated());
+		System.out.println(account.getBalance()+" "+ account.getMonthlyInterest()+" "+account.getDateCreated());
 		
 	}
 }
+/**довго не мудруючи переписав за твоїм зразком. тепер наступні питання:
+ * 
+1. маємо тепер один спільний клас. чому? чи не є сенс створення класів саме в тому,
+щоб мати до них доступ з інших класів. ну типу як з функцією. або я все не так розумію.
+2. коли переписав код залишивши розподіл на два класи то не працювало нічого. тобто println() нічого не писав. чому?
+3. account.getDateCreated() видає null. чому і що мав би? і як зробити щоб була, як я розумію, поточна дата.
+
+в підсумку я умову до кінця так і не зрозумів що там вони хотіли, але головне що хоч щось працює))*/
