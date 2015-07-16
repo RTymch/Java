@@ -22,6 +22,7 @@ If ad - bc is 0, report that “The equation has no solution.” See Programming
 Exercise 3.3 for sample runs.*/
 public class Class11 /*LinearEquation*/{   
 	// переробив, працює. але боюсь я не правильно зрозумів умову. з алгеброю я поки що не дуже
+	// результат із наведеним прикладом у вправі 3.3 не співпадає.  ax + by = e  cx + dy = f взагалі використовуються?
 	private double a;
 	private double b;
 	private double c;
