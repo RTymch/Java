@@ -34,7 +34,7 @@ a balance of $20,000, and an annual interest rate of 4.5%. Use the withdraw
 method to withdraw $2,500, use the deposit method to deposit $3,000, and print
 the balance, the monthly interest, and the date when this account was created.*/
 
-public class Class07 /*Account*/{
+public class Class07 /*Account*/{     
 
 	private int id = 0;
 	private double balance = 0;
@@ -43,60 +43,69 @@ public class Class07 /*Account*/{
 	
 	Class07(){}
 	
-	Class07(int id, double balance){
-		id = newId;
-		balance = newBalance;
+	Class07(int id, double balance, double annualInterestRate){
+		this.id = id;
+		this.balance = balance;
+		this.annualInterestRate = annualInterestRate;
 	}
 	
 	public int getId(){
-		return id;
+		return this.id;
 	}
-	public void setId(int newId){
-		id = newId;
+	public void setId(int id){
+		this.id = id;
 	}
 	
 	public double getBalance(){
-		return balance;
+		return this.balance;
 	}
-	public void setBalance(double newBalance){
-		balance = newBalance;
+	public void setBalance(double balance){
+		this.balance = balance;
 	}
 	
 	public double getAnnualInterestRate(){
-		return annualInterestRate;
+		return this.annualInterestRate;
 	}
-	public void setAnnualInterestRate(double newAnnualInterestRate){
-		annualInterestRate = newAnnualInterestRate / 100;
+	public void setAnnualInterestRate(double annualInterestRate){
+		this.annualInterestRate = annualInterestRate / 100;
 	}
 	
-	public double getDateCreated(){
-		return dateCreated;
+	public Date getDateCreated(){
+		return this.dateCreated;
 	}
 	
 	public double getMonthlyInterestRate(){
-		monthlyInterestRate = annualInterestRate / 12;
+		double monthlyInterestRate = this.annualInterestRate / 12;
 		return monthlyInterestRate;
 	}
 	
 	public double getMonthlyInterest(){
-		monthlyInterest = balance * monthlyInterestRate;
+		double monthlyInterest = balance * getMonthlyInterestRate();
 		return monthlyInterest; 
 	}
-	public double withdraw(){
-		balance - 
+	public double withdraw(int amount){
+		return balance -= amount;
 	}
-	public double deposit(){
-		balance + 
+	public double deposit(int amount){
+		return balance += amount;
 	}
-}
-
-class Test07Class{
 	
 	public static void main(String[] args){
 		
-		Class07 account= new Class07();
-		account.id = 1122;
-		account.balance = 20000;
-		account.annualInterestRate = 4.5;
+		Class07 account= new Class07(1122, 20000, 4.5);
+		
+		account.withdraw(2500);
+		account.deposit(3000);
+		
+		System.out.println(account.getBalance()+" "+ account.getMonthlyInterest()+" "+account.getDateCreated());
+		
 	}
 }
+/**довго не мудруючи переписав за твоїм зразком. тепер наступні питання:
+ * 
+1. маємо тепер один спільний клас. чому? чи не є сенс створення класів саме в тому,
+щоб мати до них доступ з інших класів. ну типу як з функцією. або я все не так розумію.
+2. коли переписав код залишивши розподіл на два класи то не працювало нічого. тобто println() нічого не писав. чому?
+3. account.getDateCreated() видає null. чому і що мав би? і як зробити щоб була, як я розумію, поточна дата.
+
+в підсумку я умову до кінця так і не зрозумів що там вони хотіли, але головне що хоч щось працює))*/

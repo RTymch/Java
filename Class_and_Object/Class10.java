@@ -21,43 +21,46 @@ the discriminant is 0, display the one root. Otherwise, display “The equation 
 no roots.” See Programming Exercise 3.1 for sample runs.*/
 import java.util.Scanner;
 
-public class Class10 /*QuadraticEquation*/ {
-	
-	private double a;
+public class Class10 /*QuadraticEquation*/ {   // переробив, запрацювало!!! 
+						// але є питання. у нас відсутні setMethods(). чому тоді приватні
+	private double a;			// змінюються?
 	private double b;
 	private double c;
 	
 	Class10(double a, double b, double c){
-		
+		this.a = a;
+		this.b = b;
+		this.c = c;
 	}
 	public double getA(){
-		return a;
+		return this.a;
 	}
 	public double getB(){
-		return b;
+		return this.b;
 	}
 	public double getC(){
-		return c;
+		return this.c;
 	}
 	public double getDiscriminant(){
-		return b*b - 4*a*c;
+		double discriminant = b*b - 4*a*c;
+		return discriminant;
 	}
 	public double getRoot1(){
 		if (getDiscriminant() >= 0)
 			return (-b + Math.sqrt(getDiscriminant()));
 		else 
 			return 0;
-	}double a, double b, double c
+	}
 	public double getRoot2(){
 		if (b*b - 4*a*c >= 0)
 			return (-b - Math.sqrt(getDiscriminant()));
 		else
 			return 0;
 	}
-}
+//}
 
-class Class10Test{
-	public static void main(String[] args){
+//class Class10Test{
+	public static void main(String[] args){           //чи правильна ця частина? спочатку саме з цим не міг дати ради
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter value for a, b and c: ");
 		double newA = input.nextDouble();
@@ -65,8 +68,12 @@ class Class10Test{
 		double newC = input.nextDouble();
 		
 		Class10 equation = new Class10(newA, newB, newC);
-		equation.a = newA;
-		equation.b = newB;
-		equation.c = newC;
+		if(equation.getDiscriminant() > 0)
+			System.out.println("Discriminant is positive. Root1 = " + equation.getRoot1() 
+					+" and Root2 = "+ equation.getRoot2());
+		else if(equation.getDiscriminant() == 0)
+			System.out.println("Discriminant is equal to 0. Root1 = " + equation.getRoot1());
+		else
+			System.out.println("The equation has no roots.");
 	}
 }

@@ -27,18 +27,27 @@ constructor, using RegularPolygon(6, 4) , and using RegularPolygon(10,
 4, 5.6, 7.8) . For each object, display its perimeter and area.*/
 
 
-public class Class09 /*RegularPolygon*/{
-	
+public class Class09 /*RegularPolygon*/{	// переробив за твоїм зразком і все працює. єдине питання як 
+						// і в попередньому з приводу об’єднання в межах одного класу
 	private int n  = 3;
 	private double side = 1;
 	private double x = 0;
 	private double y = 0;
 	
-	Class09(){}
-	Clas09(int n, double side){
+	Class09(){
 		
 	}
-	Class09(){}
+	
+	Class09(int n, double side){
+		this.n = n;
+		this.side = side;
+	}
+	Class09(int n, double side, double x, double y){
+		this.n = n;
+		this.side = side;
+		this.x = x;
+		this.y = y;
+	}
 	
 	
 	public int getN(){
@@ -75,17 +84,20 @@ public class Class09 /*RegularPolygon*/{
 	public double getArea(){
 		return (n * Math.sqrt(side)) / (4 * Math.tan(Math.toRadians(Math.PI)));
 	}
-}
+//}
 
-class Class09Test{
+//class Class09Test{
 	
 	public static void main(String[] args){
 		
-		Class09 polygon1 = new Class09;
-		System.out.println(getPerimeter() +" "+ getArea);
+		Class09 polygon1 = new Class09();
+		System.out.println(polygon1.getPerimeter() +" "+ polygon1.getArea());
 		
-		Class09 polygon2 = new Class09;
-		Class09 polygon3 = new Class09;
+		Class09 polygon2 = new Class09(6, 4);  
+		System.out.println(polygon2.getPerimeter() +" "+ polygon2.getArea());  
 		
+		Class09 polygon3 = new Class09(10, 4, 5.6, 7.8);
+		System.out.println(polygon3.getPerimeter() +" "+ polygon3.getArea());
 	}
 }
+

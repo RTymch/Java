@@ -20,8 +20,9 @@ Draw the UML diagram for the class and then implement the class. Write a test
 program that prompts the user to enter a , b , c , d , e , and f and displays the result.
 If ad - bc is 0, report that “The equation has no solution.” See Programming
 Exercise 3.3 for sample runs.*/
-public class Class11 /*LinearEquation*/{
-	
+public class Class11 /*LinearEquation*/{   
+	// переробив, працює. але боюсь я не правильно зрозумів умову. з алгеброю я поки що не дуже
+	// результат із наведеним прикладом у вправі 3.3 не співпадає.  ax + by = e  cx + dy = f взагалі використовуються?
 	private double a;
 	private double b;
 	private double c;
@@ -30,33 +31,36 @@ public class Class11 /*LinearEquation*/{
 	private double f;
 	
 	Class11(double a, double b, double c, double d, double e, double f){
-		
+		this.a = a;
+		this.b = b;
+		this.c = c;
+		this.d = d;
+		this.e = e;
+		this.d = d;
 	}
 	
 	public double getA(){
-		return a;
+		return this.a;
 	} 
 	public double getB(){
-		return b;
+		return this.b;
 	}
 	public double getC(){
-		return c;
+		return this.c;
 	}
 	public double getD(){
-		return d;
+		return this.d;
 	}
 	public double getE(){
-		return e;
+		return this.e;
 	}
 	public double getF(){
-		return f;
+		return this.f;
 	}
 	
 	public boolean isSolvable(){
 		if(a * d - b * c != 0)
-			return true;
-		else 
-			return false;		
+			return true;		
 	}
 	
 	public double getX(){
@@ -67,10 +71,24 @@ public class Class11 /*LinearEquation*/{
 		double y = (a * f - e * c) / (a * d - b * c);
 		return y;
 	}
-}
+//}
 
-class Class11Test{
+//class Class11Test{
 	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter value for a, b, c, d, e and f: ");
+		double a1 = input.nextDouble();
+		double b1 = input.nextDouble();
+		double c1 = input.nextDouble();
+		double d1 = input.nextDouble();
+		double e1 = input.nextDouble();
+		double f1 = input.nextDouble();
+		
+		Class11 linear = new Class11(a1, b1, c1, d1, e1, f1);
+		if(linear.isSolvable() == false)
+			System.out.println("The equation has no solution");
+		else
+			System.out.println("X is " + linear.getX() + " and Y is " + linear.getY());
+	}	
+		
 }

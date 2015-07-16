@@ -76,10 +76,10 @@ public class Class08 /*Fan*/ {
 	}
 
 	class TestClass08{                          
-		public void main(String[] args){  //тут не вдалося зробити public static 
+		public void main(String[] args){  //тут не вдалося зробити public static. екліпс підкреслив. чому? 
 			
-			Class08 fan1 = new Class08();
-			fan1.speed = FAST;
+			Class08 fan1 = new Class08();   // оскільки у нас є тільки один конструктор без аргументів
+			fan1.speed = FAST;		// то чи буде правильним саме такий запис?
 			fan1.radius = 10;
 			fan1.color = "yellow";
 			fan1.on = true;
