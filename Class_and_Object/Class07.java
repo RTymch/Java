@@ -34,17 +34,17 @@ a balance of $20,000, and an annual interest rate of 4.5%. Use the withdraw
 method to withdraw $2,500, use the deposit method to deposit $3,000, and print
 the balance, the monthly interest, and the date when this account was created.*/
 
-public class Class07 /*Account*/{     // ну по перше сама умова цієї задачі не надто мені зрозуміла. і тут таких повно
-				     // якщо після прочитання умови ти також нічого не зрозумів, то можна забити і
-	private int id = 0;	    //  перейти сюди https://github.com/SergiyL/Java/blob/master/Class_and_Object/Class08.java
+public class Class07 /*Account*/{     
+				     
+	private int id = 0;	   
 	private double balance = 0;
 	private double annualInterestRate = 0;
-	private Date dateCreated;     // не певен чи правильно зрозумів умову "private Date data field"
+	private Date dateCreated;     
 	
 	Class07(){}
 	
-	Class07(int id, double balance){    // конструктор за зразком поданим в підручнику. але екліпс показує помилку
-		id = newId;      
+	Class07(int newId, double newBalance){    
+		id = newId;           
 		balance = newBalance;
 	}
 	
@@ -82,11 +82,11 @@ public class Class07 /*Account*/{     // ну по перше сама умов�
 		double monthlyInterest = balance * monthlyInterestRate();  
 		return monthlyInterest; 
 	}
-	public double withdraw(){
-		balance - getMonthlyInterest() // якщо правильно зрозумів вимогу до функції. мінус підсвічено як недопустимий оператор
-	}
-	public double deposit(){
-		balance + getMonthlyInterest() // аналогічно
+	public double withdraw(int x){
+		return balance - x; //за підказками екліпса добавив аргумент x і у нижче.я саму умову з цим всім 
+	}				// не надто правда розумію. ну то таке
+	public double deposit(int y){
+		return balance + y; // аналогічно
 	}
 }
 
@@ -94,12 +94,12 @@ class Test07Class{
 	
 	public static void main(String[] args){
 		
-		Class07 account= new Class07();
-		account.id = 1122;
+		Class07 account= new Class07();     // помилка The field Class07.id is not visible. не розумію чому. 
+		account.id = 1122;		// setId створено. для інших те саме
 		account.balance = 20000;
 		account.annualInterestRate = 4.5;
+		account.withdraw(2500);             
+		account.deposit(3000);
 		
-		// Use the withdraw method to withdraw $2,500, use the deposit method to deposit $3,000. 
-		// тут взагалі нічого не ясно.
 	}
 }
