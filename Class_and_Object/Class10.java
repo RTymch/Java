@@ -22,8 +22,8 @@ no roots.” See Programming Exercise 3.1 for sample runs.*/
 import java.util.Scanner;
 
 public class Class10 /*QuadraticEquation*/ {   // переробив, запрацювало!!! 
-		
-	private double a;
+						// але є питання. у нас відсутні setMethods(). чому тоді приватні
+	private double a;			// змінюються?
 	private double b;
 	private double c;
 	
