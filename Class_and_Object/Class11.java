@@ -84,7 +84,7 @@ public class Class11 /*LinearEquation*/{
 		double f1 = input.nextDouble();
 		
 		Class11 linear = new Class11(a1, b1, c1, d1, e1, f1);
-		if(a1*d1 - b1*c1 == 0)
+		if(linear.isSolvable() == false)
 			System.out.println("The equation has no solution");
 		else
 			System.out.println("X is " + linear.getX() + " and Y is " + linear.getY());
