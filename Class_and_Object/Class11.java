@@ -21,8 +21,7 @@ program that prompts the user to enter a , b , c , d , e , and f and displays th
 If ad - bc is 0, report that “The equation has no solution.” See Programming
 Exercise 3.3 for sample runs.*/
 public class Class11 /*LinearEquation*/{   
-	// переробив, працює. але боюсь я не правильно зрозумів умову. бо тут по ідеї мали б бути дві точки А і В
-	// в кожної з яких пара координат х, у. з алгеброю я поки що не дуже
+	// переробив, працює. але боюсь я не правильно зрозумів умову. з алгеброю я поки що не дуже
 	private double a;
 	private double b;
 	private double c;
