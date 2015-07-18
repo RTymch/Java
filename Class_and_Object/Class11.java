@@ -23,6 +23,9 @@ Exercise 3.3 for sample runs.*/
 public class Class11 /*LinearEquation*/{   
 	// переробив, працює. але боюсь я не правильно зрозумів умову. з алгеброю я поки що не дуже
 	// результат із наведеним прикладом у вправі 3.3 не співпадає.  ax + by = e  cx + dy = f взагалі використовуються?
+	// -- Гугл на допомогу ))) http://www.webmath.ru/poleznoe/formules_5_4.php
+	// -- я вже теж це все позабував
+	// -- отже це система з двох рівнянь, яка тут розв'язується методом Крамера
 	private double a;
 	private double b;
 	private double c;
@@ -36,7 +39,7 @@ public class Class11 /*LinearEquation*/{
 		this.c = c;
 		this.d = d;
 		this.e = e;
-		this.d = d;
+		this.f = f; //-- тут було ще раз d замість f, тому фігово рахувало
 	}
 	
 	public double getA(){
@@ -57,10 +60,9 @@ public class Class11 /*LinearEquation*/{
 	public double getF(){
 		return this.f;
 	}
-	
+	//-- це визначник матриці системи, якщо він = 0, система рівнянь не має розв'язку 
 	public boolean isSolvable(){
-		if(a * d - b * c != 0)
-			return true;		
+		return a * d - b * c != 0;	//-- нащо ускладнювати)	
 	}
 	
 	public double getX(){
@@ -85,10 +87,12 @@ public class Class11 /*LinearEquation*/{
 		double f1 = input.nextDouble();
 		
 		Class11 linear = new Class11(a1, b1, c1, d1, e1, f1);
-		if(linear.isSolvable() == false)
+		if(!linear.isSolvable()) {// --порівняння з false зайве, просто інвертуєм значення, яке повертає isSolvable, за допомогою оператора !
 			System.out.println("The equation has no solution");
-		else
+		} else {
 			System.out.println("X is " + linear.getX() + " and Y is " + linear.getY());
+		}// в таких блоках ставимо фігурні дужки, навіть якщо все по одному рядку - такі загальноприйняті правила
+		input.close();
 	}	
 		
 }
