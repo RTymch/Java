@@ -9,7 +9,8 @@ endpoints and displays the intersecting point. (Hint: Use the LinearEquation
 class in Exercise 8.11.)*/
 public class Class12 {
 	  // Hint: Use the LinearEquation class in Exercise 8.11 як? тут потрібна точка перетину. 
-	
+	// --читай тут http://ua.onlinemschool.com/math/library/analytic_geometry/line/#h4
+	// --і http://stu.sernam.ru/book_msh.php?id=30
 	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
@@ -25,7 +26,8 @@ public class Class12 {
 		double y4 = input.nextDouble();
 		
 		Class11 intersection = new Class11(x1, y1, x2, y2, x3, y3, x4, y4);  // якось так мало б бути? чи потрібно тут переписати клас?
-		
+		//--щось в тебе забагато параметрів, має бути 6 )))
+		//-- написали ж використати існуючий клас. Підказка: цей клас треба використати тричі
 		System.out.print("The intersection point is: " + );
 	}
 }
