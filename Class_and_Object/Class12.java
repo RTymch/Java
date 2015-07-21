@@ -8,10 +8,8 @@ are ( x3 , y3 ) and ( x4 , y4 ). Write a program that prompts the user to enter 
 endpoints and displays the intersecting point. (Hint: Use the LinearEquation
 class in Exercise 8.11.)*/
 public class Class12 {
-	  // Hint: Use the LinearEquation class in Exercise 8.11 як? тут потрібна точка перетину. 
-	// --читай тут http://ua.onlinemschool.com/math/library/analytic_geometry/line/#h4
-	// --і http://stu.sernam.ru/book_msh.php?id=30
-	
+	  //ні, я однаково цілковито не розумію як можна знайти точку перетину двох прямих використовуючи метод
+	//котрий... що він там до речі шукає? 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter the endpoints of the first line segment: ");
@@ -25,9 +23,10 @@ public class Class12 {
 		double x4 = input.nextDouble();
 		double y4 = input.nextDouble();
 		
-		Class11 intersection = new Class11(x1, y1, x2, y2, x3, y3, x4, y4);  // якось так мало б бути? чи потрібно тут переписати клас?
-		//--щось в тебе забагато параметрів, має бути 6 )))
-		//-- написали ж використати існуючий клас. Підказка: цей клас треба використати тричі
+		Class11 intersection1 = new Class11();  
+		Class11 intersection2 = new Class11();
+		Class11 intersection3 = new Class11();
+		
 		System.out.print("The intersection point is: " + );
 	}
 }
