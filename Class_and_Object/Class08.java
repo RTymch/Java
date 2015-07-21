@@ -36,7 +36,7 @@ public class Class08 /*Fan*/ {
 	private double radius = 5;
 	String color = "blue";
 	
-	Class08(){}
+	//Class08(){}
 	
 	public int getSpeed(){
 		return speed;
@@ -66,31 +66,36 @@ public class Class08 /*Fan*/ {
 		color = newColor;
 	}
 	
-	String toString(int speed, boolean on, double radius, String color){    // не розумію як зробити return однією стрічкою.  
+	public String toString(){//--тут ми переписуємо дефолтний метод toString, який є в кожному об'єкті    // не розумію як зробити return однією стрічкою.  
 		if (on = true){                                                  // і чи я взагалі правильно зрозумів з приводу toString()
-			return toString(speed, color, radius);						
+			return "Speed: " + speed + ", Color: " + color + ", Radius:" + radius;	//-- дивись, в тебе метод має повертати String. Тобто тут ти будуєш стрічку і повертаєш її					
 		}
 		else{
-			return toString(speed, radius, "fan is off");
+			return "Speed: " + speed + ", Radius:" + radius + ", fan is off";
 		}
 	}
 
 	class TestClass08{                          
 		public void main(String[] args){  //тут не вдалося зробити public static. екліпс підкреслив. чому? 
-			
+			                            //-- тобі не треба створювати ще один клас для цього. Просто додаєш такий метод в основному класі. 
 			Class08 fan1 = new Class08();   // оскільки у нас є тільки один конструктор без аргументів
 			fan1.speed = FAST;		// то чи буде правильним саме такий запис?
-			fan1.radius = 10;
+			fan1.radius = 10;       // -- так, буде. Можеш взагалі конструктора не писати, все одно буде дефолтний  
 			fan1.color = "yellow";
 			fan1.on = true;
-			System.out.println(toString());
+			System.out.println(toString());// --а де об'єкт? чий метод toString викликаєш? 
 			
 			Class08 fan2 = new Class08();
 			fan2.speed = MEDIUM;
 			fan2.radius = 5;
 			fan2.color = "blue";
 			fan2.on = false;
-			System.out.println(toString());
+			System.out.println(toString());// --а де об'єкт? чий метод toString викликаєш?
 		}
+	}
+	
+	public static void main(String[] args){
+		//Here you go
+		
 	}
 }

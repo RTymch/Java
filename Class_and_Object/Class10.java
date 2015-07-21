@@ -24,8 +24,8 @@ import java.util.Scanner;
 public class Class10 /*QuadraticEquation*/ {   // переробив, запрацювало!!! 
 						// але є питання. у нас відсутні setMethods(). чому тоді приватні
 	private double a;			// змінюються?
-	private double b;
-	private double c;
+	private double b;          // -- private - це модифікатор доступу, який встановлює видимість змінної/методу лише в межах даного класу.
+	private double c;          // -- тому в даному класі ти з своїми private змінними робиш що завгодно 
 	
 	Class10(double a, double b, double c){
 		this.a = a;
@@ -61,7 +61,7 @@ public class Class10 /*QuadraticEquation*/ {   // переробив, запра
 
 //class Class10Test{
 	public static void main(String[] args){           //чи правильна ця частина? спочатку саме з цим не міг дати ради
-		Scanner input = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);       // -- ніби все ок
 		System.out.println("Enter value for a, b and c: ");
 		double newA = input.nextDouble();
 		double newB = input.nextDouble();
@@ -75,5 +75,6 @@ public class Class10 /*QuadraticEquation*/ {   // переробив, запра
 			System.out.println("Discriminant is equal to 0. Root1 = " + equation.getRoot1());
 		else
 			System.out.println("The equation has no roots.");
+		input.close();//Eclipse же просив :)
 	}
 }

@@ -16,10 +16,11 @@ program that measures the execution time of sorting 100,000 numbers using selec-
 tion sort.*/
 public class Class14 /*Stopwatch*/ {
 										//уявлення не маю чи правильно зроблено, але якийсь результат видає))
+	                                    //-- та добре, чо)
 	private long startTime;  
 	private long endTime;
 	
-	Class14(){}
+	//Class14(){} //--AAAAAAAAAAAAAAAAAA!!!!
 	
 	public long getStartTime(){
 		return this.startTime;

@@ -29,6 +29,7 @@ constructor, using RegularPolygon(6, 4) , and using RegularPolygon(10,
 
 public class Class09 /*RegularPolygon*/{	// переробив за твоїм зразком і все працює. єдине питання як 
 						// і в попередньому з приводу об’єднання в межах одного класу
+	//-- Взагалі підхід такий: один файл - один клас. 
 	private int n  = 3;
 	private double side = 1;
 	private double x = 0;
