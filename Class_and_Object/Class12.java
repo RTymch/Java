@@ -10,6 +10,10 @@ class in Exercise 8.11.)*/
 public class Class12 {
 	  //ні, я однаково цілковито не розумію як можна знайти точку перетину двох прямих використовуючи метод
 	//котрий... що він там до речі шукає? 
+	//-- точку перетину двох прямих
+	//-- спочатку треба з кожної пари точок знайти рівняння прямих, що проходять через них
+	//--а тоді точку перетину цих прямих
+	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter the endpoints of the first line segment: ");
