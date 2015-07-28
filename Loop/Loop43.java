@@ -4,7 +4,7 @@ number of seconds, displays a message at every second, and terminates when the
 time expires*/
 import java.util.Scanner;
 
-public class Loop43 {
+public class Loop43 {      // тут у мене спрощений варіант. нема відрахунку власне секунд. але попри простоту ніби циклу він чомусь не працює((
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		System.out.println("Enter the number of seconds: ");
