@@ -1,6 +1,9 @@
 package Loop;
 /*(Display pyramid ) Write a program that prompts the user to enter an integer from
 1 to 15 and displays a pyramid, as shown in the following sample run
+    1
+  1 2 1
+1 2 3 2 1
 */
 
 import java.util.Scanner;
